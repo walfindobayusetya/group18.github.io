@@ -9,6 +9,38 @@ html {
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
+html {scroll-behavior:smooth;}
+.ignielToTop {
+	width:35px; 
+	height:35px; 
+	position:fixed; 
+	bottom:50px; 
+	right: 50px; 
+	z-index:99; 
+	cursor:pointer; 
+	border-radius:100px; 
+	transition:all .5s; 
+	background:rgb(0, 196, 245) url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center center;}
+.ignielToTop:hover {
+	cursor: pointer;
+	background:#1d2129 url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center center;}
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(240, 242, 245);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(194, 193, 193);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(175, 175, 175);
+}
 a {
 	text-decoration: none;
 }
@@ -424,6 +456,7 @@ p {
 	#projects .all-projects .project-img {
 		height: 100%;
 	}
+}
 
 @media only screen and (min-width: 1200px) {
 	#services .service-bottom .service-item {
@@ -493,6 +526,86 @@ p {
 	z-index: -1;
 }
 /* end of css for "about" section */
+/* Footer */
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+.footer-sh{
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-sh .footer-left,
+.footer-sh .footer-center,
+.footer-sh .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.footer-sh .footer-left{
+	width: 30%;
+}
+
+.footer-sh .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-sh .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-sh .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-sh .footer-center{
+	width: 35%;
+}
+
+.footer-sh .footer-right{
+	width: 30%;
+}
+
+.footer-sh .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-sh .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.footer-sh .footer-company-copyright{
+	line-height: 50px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-sh .footer-icons{
+	margin-top: 25px;
+}
+
 
 /* start of css fot "contact-us" section */
 #contact .contact {
@@ -539,6 +652,22 @@ p {
 }
 /* end of css "contact-us section" */
 
+
+.footer-sh .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+/* Footer */
 @keyframes hamburger_puls {
 	0% {
 		opacity: 1;
@@ -641,6 +770,25 @@ p {
 		padding-left: 20px;
 	}
 	/* end of css for responsive "contact-us" section */
+}
+@media (max-width: 880px) {
+
+	.footer-sh .footer-left,
+	.footer-sh .footer-center,
+	.footer-sh .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-sh .footer-center i{
+		margin-left: 0;
+	}
+
+}
+@media (max-height:800px){
+	footer { position: static; }
 }
 
 @media only screen and (min-width: 1200px) {
